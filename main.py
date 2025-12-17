@@ -1,4 +1,5 @@
 import tkinter
+import random
 screen = tkinter.Tk()
 can = tkinter.Canvas(screen)
 can.pack()
@@ -6,7 +7,8 @@ can['width'] = 500
 can['height'] = 500
 
 def draw(sur):
-    can.create_oval(sur.x-10, sur.y-10, sur.x+10, sur.y+10)
+    r = random.randint(10, 30)
+    can.create_oval(sur.x-r, sur.y-r, sur.x+r, sur.y+r)
 
-can.bind("<Button-1>", draw)
+can.bind("<B1-Motion>", draw)
 screen.mainloop()
