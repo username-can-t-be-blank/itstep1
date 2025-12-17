@@ -11,8 +11,61 @@ attempts_left = 6
 print("🎮 Welcome to Hangman!")
 print("Guess the word, one letter at a time.")
 
+HANGMAN_PICS = [
+    """
+     +---+
+         |
+         |
+         |
+        ===
+    """,
+    """
+     +---+
+     O   |
+         |
+         |
+        ===
+    """,
+    """
+     +---+
+     O   |
+     |   |
+         |
+        ===
+    """,
+    """
+     +---+
+     O   |
+    /|   |
+         |
+        ===
+    """,
+    """
+     +---+
+     O   |
+    /|\\  |
+         |
+        ===
+    """,
+    """
+     +---+
+     O   |
+    /|\\  |
+    /    |
+        ===
+    """,
+    """
+     +---+
+     O   |
+    /|\\  |
+    / \\  |
+        ===
+    """
+]
+
 while attempts_left > 0:
     # Display the word with blanks
+    print(HANGMAN_PICS[6 - attempts_left])
     display_word = ""
     for letter in secret_word:
         if letter in guessed_letters:
