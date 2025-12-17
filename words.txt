@@ -1,0 +1,7 @@
+python
+hangman
+developer
+keyboard
+algorithm
+computer
+software

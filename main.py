@@ -1,9 +1,12 @@
 import random
 
 # List of words to guess
-words = ["python", "hangman", "programming", "developer", "computer"]
+def load_words(filename="words.txt"):
+    with open(filename, "r") as file:
+        return [line.strip().lower() for line in file if line.strip()]
 
 # Choose a random word
+words = load_words()
 secret_word = random.choice(words)
 guessed_letters = set()
 attempts_left = 6
