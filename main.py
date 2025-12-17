@@ -66,7 +66,7 @@ HANGMAN_PICS = [
     """
 ]
 
-while attempts_left >= 0:
+while attempts_left = 0:
     # Display the word with blanks
     print(HANGMAN_PICS[6 - attempts_left])
     display_word = ""
@@ -107,3 +107,4 @@ while attempts_left >= 0:
 # Game over
 if attempts_left == 0:
     print("\n💀 Game Over! The word was:", secret_word)
+    print(HANGMAN_PICS[6 - attempts_left])
