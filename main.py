@@ -63,7 +63,7 @@ HANGMAN_PICS = [
     """
 ]
 
-while attempts_left > 0:
+while attempts_left >= 0:
     # Display the word with blanks
     print(HANGMAN_PICS[6 - attempts_left])
     display_word = ""
